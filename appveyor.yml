@@ -1,0 +1,7 @@
+image: Visual Studio 2019
+
+before_build:
+  - nuget restore LR4_2.pro
+
+build:
+  project: LR4_2.pro
