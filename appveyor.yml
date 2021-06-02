@@ -1,7 +1,7 @@
 install:
   - ps: git submodule -q update --init
 init:
-  - set PATH=C:\Qt\5.13.2\%compiler%\bin;%PATH%
+  - set PATH=C:\Qt\5.10.1\%compiler%\bin;%PATH%
   - ps: dir C:\Qt
   - ps: qmake --version
 build_script:
