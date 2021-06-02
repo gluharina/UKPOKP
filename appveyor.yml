@@ -7,4 +7,4 @@ build_script:
   - qmake test_code\test_code.pro
   - mingw32-make
 test_script:
-- cmd: ctest --verbose --parallel 4 -C Debug
+- cmd: qtest --verbose --parallel 4 -C Debug
