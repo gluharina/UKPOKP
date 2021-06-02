@@ -6,5 +6,4 @@ build_script:
   - qmake LR4_2.pro
   - mingw32-make
 test:
-  assemblies:
-    - test_code/test_code.pro
+- ctest -V -C "Debug" -I 1,2,1
