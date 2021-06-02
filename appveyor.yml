@@ -1,12 +1,15 @@
 version: 1.0.{build}
-build_script:
+inistall:
     set QTDIR=C:\Qt\5.13.2\mingw73_32
     choco install -y InnoSetup
     set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw730_32\bin;%PATH%;"C:\Program Files (x86)\Inno Setup 5"
+    
+build_script:
     cd C:\projects\LR4_2
     cd code
     qmake.exe code.pro
     mingw32-make
+test:    
     cd ..
     cd test_code
     qmake.exe test_code.pro
