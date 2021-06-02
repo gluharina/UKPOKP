@@ -7,4 +7,6 @@ build_script:
   - qmake test_code\test_code.pro
   - mingw32-make
 test_script:
-- cmd: qtest --verbose --parallel 4 -C Debug
+   - cd c:\dev\install
+   - start /wait %example%.exe test
+   - cd c:\dev\examples
