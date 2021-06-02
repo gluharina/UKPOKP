@@ -6,4 +6,5 @@ build_script:
   - qmake LR4_2.pro
   - mingw32-make
 test:
-  - qmake test_code/test_code.pro
+  assemblies:
+    - test_code/test_code.pro
