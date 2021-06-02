@@ -5,4 +5,5 @@ install:
 build_script:
   - qmake LR4_2.pro
   - mingw32-make
-
+test_script:
+- cmd: ctest --verbose --parallel 4 -C Debug
