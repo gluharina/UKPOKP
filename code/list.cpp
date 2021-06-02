@@ -158,6 +158,7 @@ std::string ff1(std::string start)
     return tre;
 }
 
+
 QString Balan(QString str, QString REZULT)
 {
     REZULT = QString::fromStdString(ff1(str.toStdString()));
