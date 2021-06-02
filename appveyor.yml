@@ -1,13 +1,15 @@
-install:
-  - ps: git submodule -q update --init
-init:
-  - set PATH=C:\Qt\5.10.1\%compiler%\bin;%PATH%
-  - ps: dir C:\Qt
-  - ps: qmake --version
+version: 1.0.{build}
 build_script:
-  - if [%PLATFORM%]==[x64] cmake -G "Visual Studio 14 2015 Win64" -DQT_VARIANT="qt5" -DUSE_TESTS=True .
-  - cmake --build .
-  # one gui test failed for some reason, I need windows machine to debug
-  - ctest -V -C "Debug" -I 1,2,1
-matrix:
-  fast_finish: true
+- cmd: >-
+    "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64
+    set "QTDIR=C:\Qt\5.11.3\mingw53_32"
+    set "PATH=%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin;C:\MinGW\bin;%PATH%"
+    cd C:\projects\LR4_2
+    cd code
+    qmake.exe code.pro
+    mingw32-make
+    cd ..
+    cd test_code
+    qmake.exe test_code.pro
+    mingw32-make
+    release\test_code.exe
