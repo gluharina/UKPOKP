@@ -5,7 +5,7 @@ install:
 build_script:
   - qmake LR4_2.pro
   - mingw32-make
-  - cd ..\..\test_code
+  - cd test_code
     - dir
     - windeployqt --release tst_test_gui.exe
     - dir
