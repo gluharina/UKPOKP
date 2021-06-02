@@ -7,4 +7,3 @@ build_script:
   - mingw32-make
 test:
   - qmake test_code/test_code.pro
-  - mingw32-make
