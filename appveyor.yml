@@ -5,6 +5,9 @@ install:
 build_script:
   - qmake LR4_2.pro
   - mingw32-make
-test:
-  assemblies:
-    - test_code/test_code.pro
+  - cd ..\..\test_code
+    - dir
+    - windeployqt --release tst_test_gui.exe
+    - dir
+ 
+    - .\tst_test_gui.exe -xunitxml > test_code.xml
