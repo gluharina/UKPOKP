@@ -6,7 +6,3 @@ build_script:
   - qmake LR4_2.pro
   - mingw32-make
 
-artifacts:
-  - path: Output\fastqt-*.exe
-  - path: release
-    type: zip
