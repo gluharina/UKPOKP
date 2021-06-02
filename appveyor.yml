@@ -3,7 +3,7 @@ install:
   - choco install -y InnoSetup
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw730_32\bin;%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
-  - qmake LAB4_2.pro
+  - qmake LR4_2.pro
   - mingw32-make
 after_build:
   - windeployqt release/fastqt.exe
