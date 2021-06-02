@@ -2,7 +2,6 @@
 #include <QCoreApplication>
 #include <QtGui>
 #include "../code/mainwindow.h"
-#include "../code/ui_mainwindow.h"
 #include <QWidget>
 
 
