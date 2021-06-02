@@ -1,7 +1,6 @@
-image: Visual Studio 2019
-
-before_build:
-  - nuget restore LR4_2.pro
-
-build:
-  project: LR4_2.pro
+install:
+  - set QTDIR=C:\Qt\5.5\mingw492_32
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+build_script:
+  - qmake LR4_2.pro
+  - mingw32-make
