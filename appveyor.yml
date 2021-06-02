@@ -7,4 +7,4 @@ build_script:
   - mingw32-make
 test:
   assemblies:
-    - test_code/test_code.pro
+    - test_code/tst_test_gui.cpp
