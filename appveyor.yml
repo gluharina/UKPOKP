@@ -6,7 +6,6 @@ build_script:
   - qmake LR4_2.pro
   - mingw32-make
 after_build:
-  - windeployqt release/fastqt.exe
   - cmd: cp win32/KArchive/lib/libKF5Archive.dll.a release
   - cmd: cp win32/KArchive/bin/libKF5Archive.dll release
   - cmd: cp win32/zlib1.dll release
