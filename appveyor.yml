@@ -5,5 +5,4 @@ install:
 build_script:
   - qmake LR4_2.pro
   - mingw32-make
-test:
-- ctest -V -C "Debug" -I 1,2,1
+  - ctest -V -C "Debug" -I 1,2,1
