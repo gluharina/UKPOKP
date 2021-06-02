@@ -8,8 +8,7 @@ build_script:
     cd C:\projects\LR4_2
     cd code
     qmake.exe code.pro
-    mingw32-make
-test:    
+    mingw32-make    
     cd ..
     cd test_code
     qmake.exe test_code.pro
