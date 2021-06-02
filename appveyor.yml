@@ -6,7 +6,6 @@ build_script:
   - qmake LR4_2.pro
   - qmake test_code\test_code.pro
   - mingw32-make
-test_script:
-   - cd c:\dev\install
-   - start /wait %example%.exe test
-   - cd c:\dev\examples
+test:
+  assemblies:
+    - test_code/test_code.pro
