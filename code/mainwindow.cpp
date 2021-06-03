@@ -28,7 +28,3 @@ void MainWindow::on_ClButton_clicked()
     ui->Word->clear();
     return;
 }
-
-
-
-
